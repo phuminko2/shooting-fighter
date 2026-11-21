@@ -1,0 +1,23 @@
+[project]
+name = "shooting-fighter-server"
+version = "0.1.0"
+description = "Authoritative multiplayer server for Shooting Fighter"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "shooting-fighter-shared",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+shooting-fighter-server = "shooting_fighter_server.main:run"
+
+[tool.uv.sources]
+shooting-fighter-shared = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"

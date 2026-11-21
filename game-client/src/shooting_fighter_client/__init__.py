@@ -1,0 +1,1 @@
+"""Shooting Fighter game client."""

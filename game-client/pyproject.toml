@@ -1,0 +1,23 @@
+[project]
+name = "shooting-fighter-client"
+version = "0.1.0"
+description = "Ursina multiplayer client for Shooting Fighter"
+requires-python = ">=3.12"
+dependencies = [
+    "ursina>=7.0,<8",
+    "websockets>=13,<16",
+    "shooting-fighter-shared",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+shooting-fighter-client = "shooting_fighter_client.main:run"
+
+[tool.uv.sources]
+shooting-fighter-shared = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"

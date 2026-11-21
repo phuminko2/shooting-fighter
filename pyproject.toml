@@ -1,0 +1,8 @@
+[tool.uv.workspace]
+members = ["game-client", "game-server", "shared"]
+
+[tool.pytest.ini_options]
+testpaths = ["game-client/tests", "game-server/tests", "shared/tests"]
+
+[tool.ruff]
+line-length = 100

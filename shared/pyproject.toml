@@ -1,0 +1,13 @@
+[project]
+name = "shooting-fighter-shared"
+version = "0.1.0"
+description = "Shared protocol and simulation constants for Shooting Fighter"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.8,<3"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
